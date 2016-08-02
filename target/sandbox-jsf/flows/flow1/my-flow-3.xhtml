@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"  >
+
+<h:head>
+    <title>Sandbox - JSF 2.2</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+
+        <h2>My Flow 3</h2>
+
+        <p>
+
+            <h:inputText value="#{flowScopedBean.veryImportantString}"  />
+
+        </p>
+
+        <h:commandButton value="Previous Step" action="view2Id"></h:commandButton>
+
+        <h:commandButton value="End Flow" action="end-flow"></h:commandButton>
+
+    </h:form>
+
+</h:body>
+
+</html>
