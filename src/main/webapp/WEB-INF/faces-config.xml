@@ -5,8 +5,17 @@
                                   http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
               version="2.2">
 
-    <application>
+    <!--<application>
         <navigation-handler>com.bmik.sandbox.jsf.flow.RedirectNavigationHandler</navigation-handler>
-    </application>
+    </application>-->
+
+    <navigation-rule>
+        <from-view-id>/faces/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>myFlow</from-outcome>
+            <to-view-id>/flows/flow1/my-flow.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+    </navigation-rule>
 
 </faces-config>
