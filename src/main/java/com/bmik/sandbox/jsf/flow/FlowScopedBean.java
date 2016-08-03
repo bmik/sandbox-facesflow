@@ -21,6 +21,11 @@ public class FlowScopedBean implements Serializable {
 
     private String veryImportantString;
 
+    public void finalizer() {
+        System.out.println("end");
+    }
+
+
     public String getVeryImportantString() {
         return veryImportantString;
     }

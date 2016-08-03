@@ -1,2 +1,3 @@
 com\bmik\sandbox\jsf\flow\FlowFactory.class
 com\bmik\sandbox\jsf\flow\FlowScopedBean.class
+com\bmik\sandbox\jsf\flow\RedirectNavigationHandler.class

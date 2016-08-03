@@ -33,9 +33,30 @@ public class FlowFactory implements Serializable {
         String view3Id = "view3Id";
         flowBuilder.viewNode(view3Id, "/flows/flow1/my-flow-3.xhtml");
 
+        flowBuilder.finalizer("#{flowScopedBean.finalizer}");
+
         String endId = "end-flow";
         flowBuilder.returnNode(endId)
-                .fromOutcome("/faces/index.xhtml?faces-redirect=true");
+                .fromOutcome("/faces/response.xhtml");
+
+
+        flowBuilder.navigationCase()
+                .fromViewId("*")
+                .fromOutcome("view1Id")
+                .toViewId("/flows/flow1/my-flow.xhtml")
+                .redirect();
+
+        flowBuilder.navigationCase()
+                .fromViewId("*")
+                .fromOutcome("view2Id")
+                .toViewId("/flows/flow1/my-flow-2.xhtml")
+                .redirect();
+
+        flowBuilder.navigationCase()
+                .fromViewId("*")
+                .fromOutcome("view3Id")
+                .toViewId("/flows/flow1/my-flow-3.xhtml")
+                .redirect();
 
         return flowBuilder.getFlow();
 
